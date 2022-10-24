@@ -1,7 +1,7 @@
 const fetchData = async () => {
     const access_token = '';
     const fields = 'id,caption,media_type,media_url,permalink'
-    const url = `https://graph.instagram.com/me/media?access_token=${access_token}&fields=${fields}`
+    const url = `https://graph.instagram.com/me/media?access_token=${access_token}&fields=${fields}&limit=10`
 
     const response = await fetch(url)
     const data = await response.json()

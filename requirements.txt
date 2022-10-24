@@ -8,3 +8,4 @@ flask-login
 mysqlclient
 flask-marshmallow
 email-validator
+Flask-Mail

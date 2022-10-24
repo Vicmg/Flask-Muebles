@@ -1,13 +1,21 @@
 {% extends 'base.html' %}
 
 {% block body %}
-{% block header %}
+
 <header>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style_form.css')}}">
     {% block navbar %}
         {% include 'navbar.html' %}
     {% endblock %}
-    {% block content %}{% endblock %}
+    {% block content %}
+    <section class="textos-header">
+        <h1>Rattan&Rattan</h1>
+        <h2>
+            Fabricación y restauración de muebles en Rattan natural y sintético.
+            Muebles 100% tejidos a mano.
+        </h2>
+</section>
+{% endblock %}
     {% block sobra%}
         <div class="wave" style="height: 150px; overflow: hidden">
             <svg
@@ -18,16 +26,17 @@
             ></path>
             </svg>
         </div>
-{% endblock %}
 </header>
 <body>
-    
     <div class="content">
-
         <h1 class="logo">Contactenos</h1>
-
         <div class="contact-wrapper animated bounceInUp">
             <div class="contact-form">
+            {% if success %}
+            <div class="alert alert-success" role="alert">
+                Su correo fue enviado con exito!
+            </div>
+            {% endif %}
                 <h3>Datos</h3>
                 <form action="/form" method="POST">
                     <p>
@@ -52,9 +61,7 @@
                     </p>
                     <p class="block">
                         {{ form.hidden_tag () }}
-                        <button>
-                            Enviar
-                        </button>
+                        <button>Enviar</button>
                     </p>
                 </form>
             </div>
@@ -69,9 +76,7 @@
                 <p>Company.com</p>
             </div>
         </div>
-
     </div>
-
 </body>
 {% endblock %}
 {% endblock %}
