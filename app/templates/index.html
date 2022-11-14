@@ -1,20 +1,17 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    {{ super() }}
-    Bienvenido
+{{ super() }}
+Bienvenido
 {% endblock %}
 
 {% block sobra%}
-    <div class="wave" style="height: 150px; overflow: hidden">
-        <svg
-        viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%">
-        <path
-            d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-            style="stroke: none; fill: #fff"
-        ></path>
-        </svg>
-    </div>
+<div class="wave" style="height: 150px; overflow: hidden">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%">
+        <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+            style="stroke: none; fill: #fff"></path>
+    </svg>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -30,48 +27,50 @@
 {% endblock %}
 
 {% block contenedor %}
-<section class="content-nuestros-productos">
-<h2 class="titulo">Nuestros Productos</h2>
-<div class="card-categoria estilo-a">
-    <a href="#">
-        <div class="img-container">
-            <img src="static/images/silla.jpg" alt="" class="imagen-prodcutos" />
+<section>
+    <h2 class="titulo">Nuestros Productos</h2>
+    <div class="services">
+        <div class="estilo-a">
+            <a href="#">
+                <div class="img-container">
+                    <img src="static/images/silla.jpg" alt="" class="imagen-prodcutos" />
+                </div>
+            </a>
+            <h3>SILLAS</h3>
         </div>
-    </a>
-    <h3>SILLAS</h3>
-</div>
-<div class="card-categoria estilo-a">
-    <a href="#">
-        <div class="img-container">
-            <img src="static/images/Sofas.jpg" alt="" class="imagen-prodcutos" />
+        <div class="estilo-a">
+            <a href="#">
+                <div class="img-container">
+                    <img src="static/images/Sofas.jpg" alt="" class="imagen-prodcutos" />
+                </div>
+            </a>
+            <h3>SOFAS</h3>
         </div>
-    </a>
-    <h3>SOFAS</h3>
-</div>
-<div class="card-categoria estilo-a">
-    <a href="#">
-        <div class="img-container">
-            <img src="static/images/mesa.jpg" alt="" class="imagen-prodcutos" />
+        <div class="estilo-a">
+            <a href="#">
+                <div class="img-container">
+                    <img src="static/images/mesa.jpg" alt="" class="imagen-prodcutos" />
+                </div>
+            </a>
+            <h3>MESAS</h3>
         </div>
-    </a>
-    <h3>MESAS</h3>
-</div>
-<div class="card-categoria estilo-a">
-    <a href="#">
-        <div class="img-container">
-            <img src="static/images/comedor.jpg" alt="" class="imagen-prodcutos" />
+        <div class="estilo-a">
+            <a href="#">
+                <div class="img-container">
+                    <img src="static/images/comedor.jpg" alt="" class="imagen-prodcutos" />
+                </div>
+            </a>
+            <h3>COMEDOR</h3>
         </div>
-    </a>
-    <h3>COMEDOR</h3>
-</div>
-<div class="card-categoria estilo-a">
-    <a href="#">
-        <div class="img-container">
-            <img src="static/images/mueble2.jpg" alt="" class="imagen-prodcutos" />
+        <div class="estilo-a">
+            <a href="#">
+                <div class="img-container">
+                    <img src="static/images/mueble2.jpg" alt="" class="imagen-prodcutos" />
+                </div>
+            </a>
+            <h3>ACCESORIOS</h3>
         </div>
-    </a>
-    <h3>ACCESORIOS</h3>
-</div>
+    </div>
 </section>
 {% endblock %}
 
@@ -83,29 +82,27 @@
     <div class="galeria_ports" id="galeria_port"></div>
     <div class="hover_ig"></div>
     <div class="imagen-port"></div>
-<script type="text/javascript" src="{{ url_for('static', filename = 'script.js') }}"></script>
-{% endblock %}
+    <script type="text/javascript" src="{{ url_for('static', filename = 'script.js') }}"></script>
+    {% endblock %}
 
-{% block footer%}
+    {% block footer%}
     <footer>
-    <div class="contenedor-footer">
-        <div class="content-foo">
-        <h4>Telefono</h4>
-        <p>3128777479</p>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Telefono</h4>
+                <p>3128777479</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>jairorattan@hotmail.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Direccion</h4>
+                <p>Carrera 23 # 6A-12 Barrio Alameda. | Cali - Colombia.</p>
+            </div>
         </div>
-        <div class="content-foo">
-        <h4>Email</h4>
-        <p>jairorattan@hotmail.com</p>
-        </div>
-        <div class="content-foo">
-        <h4>Direccion</h4>
-        <p>Carrera 23 # 6A-12 Barrio Alameda. | Cali - Colombia.</p>
-        </div>
-    </div>
-    <h2 class="titulo-final">
-        Todos los derechos reservados | &copy; <b>Rattan&Rattan</b> | Desarrollado por ITSafe
-    </h2>
+        <h2 class="titulo-final">
+            Todos los derechos reservados | &copy; <b>Rattan&Rattan</b> | Desarrollado por ITSafe
+        </h2>
     </footer>
-{% endblock %}
-
-
+    {% endblock %}
